@@ -1,0 +1,7 @@
+*.data
+*.db
+*.sqlite
+data.js
+config.ini
+*.pyc
+.DS_Store

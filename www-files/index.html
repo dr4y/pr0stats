@@ -1,0 +1,36 @@
+<html>
+<head>
+<script src="Chart.bundle.min.js"></script>
+<script src="data.js"></script>
+
+</head>
+<body>
+<div style="width: 770px; height: 385px;">
+<canvas id="scoreLastHour" class="chartjs" width="770" height="385" style="display: block; width: 770px; height: 385px;"></canvas>
+<canvas id="scoreLastDay" class="chartjs" width="770" height="385" style="display: block; width: 770px; height: 385px;"></canvas>
+
+</div>
+</body>
+<script>
+
+function drawLineChart(data_name) {
+	var ctx = "score"+data_name;
+	var myChart = new Chart(ctx, {
+	    type: 'line',
+	    data: {
+	        labels: labels[data_name],
+        	datasets: [{
+	            label: '# of Votes',
+        	    data: data[data_name],
+	        }]
+	    },
+	    options: {
+	    }
+	});
+}
+
+drawLineChart("LastHour");
+drawLineChart("LastDay");
+</script>
+
+</html>

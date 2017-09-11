@@ -1,0 +1,17 @@
+[general]
+; Your Username
+username =
+; The Data File, if you are not using sqlite
+data_file = ./pr0.data
+
+[sqlite]
+; Enable sqlite
+enabled = yes
+; Path to your sqlite-db. File will be created if not existing
+sqlite_file = ./pr0.db
+
+[chartjs]
+; Enable ChartJsGenerator
+enabled = True
+; Path to the folder containing the www-files
+www_root = /var/www/html/pr0gramm/
